@@ -17,55 +17,129 @@
 <body>
     <script src="JS/script.js"></script>
     <script src="JS/lineVertical.js"></script>
+    <script src="JS/contato.js"></script>
     <header>
         <div class="div-header">
-            <h6 class="icone-styles"><img src="images/icons/animal-shelter.png" class="instx"    ></h6>
-            <div class="links-div">
-                <a href="" class="link-styles">Sobre</a>
-                <a href="" class="link-styles">Projetos</a>
-                <a href="" class="link-styles">Qualificações</a>
-                <a href="" class="link-styles">Contato</a>
-            </div>
+            <span class="icone-styles">
+                <img src="images/icons/animal-shelter.png" class="instx" alt="Logo Bianca Campos">
+            </span>
+            <nav class="links-div" aria-label="Navegação principal">
+                <a href="#" class="link-styles">Sobre</a>
+                <a href="#" class="link-styles">Projetos</a>
+                <a href="#" class="link-styles">Qualificações</a>
+                <a href="#" class="link-styles">Contato</a>
+            </nav>
         </div>
     </header>
-    <main class="section-styles">
-        <div class="div-sections">
-            <div class="descricao-eu">
-                <p class="name-styles">bianca campos, 22</p>
+    <main>
+        <div class="desc-main-styles">
+            <div class="div-sections">
+                <div class="descricao-eu">
+                    <p class="name-styles hidden">bianca campos, 22</p>
+                </div>
+                <p class="desc">Olá! Sou desenvolvedora web com formação em Análise e Desenvolvimento de Sistemas. Tenho experiência em construção de interfaces modernas, responsivas e funcionais utilizando tecnologias como React.js, Vue.js, JavaScript, HTML e CSS.</p>
+                <div class="redes">
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <img src="images/icons/instagram.png" class="instx" alt="Instagram">
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <img src="images/icons/linkedin.png" class="instx" alt="LinkedIn">
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <img src="images/icons/github.png" class="instx" alt="GitHub">
+                    </a>
+                </div>
             </div>
-            <h2 class="desc">Desenvolvedora Web</h2> 
-            <div class="redes">
-                <a href="http://"><img src="images/icons/instagram.png" class="instx"></a>
-                <a href="http://"><img src="images/icons/linkedin.png" class="instx"></a>
-                <a href="http://"><img src="images/icons/github.png" class="instx"></a>  
+            <div class="imagem-port">
+                <img class="foto-port" src="images/imagem-port.jpeg" alt="Bianca Campos">
             </div>
         </div>
-        <div class="imagem-port">
-            <img class="foto-port" src="images/imagem-port.jpeg" alt="Bianca Campos">
-        </div>
-        <section class="timeline">
+        <section class="timeline" aria-label="Linha do tempo de experiências">
             <h1 class="timeline-title">Linha do Tempo</h1>
-                <div class="timeline-container">
-                    <div class="timeline-item left">
+            <div class="timeline-container">
+                <div class="timeline-item left">
                     <div class="content">
                         <h3>2021 - Início</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    </div>
-                    <div class="timeline-item right">
+                </div>
+                <div class="timeline-item right">
                     <div class="content">
                         <h3>2022 - Projeto X</h3>
                         <p>Desenvolvimento do projeto X usando tecnologias modernas.</p>
                     </div>
-                    </div>
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h3>2021 - Início</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2023 - Nova Etapa</h3>
+                        <p>Início de novos desafios e projetos inovadores.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="cards-section" aria-label="Meus Cards">
+            <h2 class="cards-title">Meus Cards</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/icons/project.png" alt="Projeto 1" class="card-icon">
+                    <h3 class="card-title">Projeto 1</h3>
+                    <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                </div>
+                <div class="card">
+                    <img src="images/icons/project.png" alt="Projeto 2" class="card-icon">
+                    <h3 class="card-title">Projeto 2</h3>
+                    <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                </div>
+                <div class="card">
+                    <img src="images/icons/project.png" alt="Projeto 3" class="card-icon">
+                    <h3 class="card-title">Projeto 3</h3>
+                    <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                </div>
+            </div>
+        </section>
+        </section>
+        <!-- Seção de Skills -->
+        <section class="skills-section" aria-label="Minhas Skills">
+            <h2 class="skills-title">Minhas Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="images/icons/react.png" alt="React.js" class="skill-icon">
+                    <span>React.js</span>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/vue.png" alt="Vue.js" class="skill-icon">
+                    <span>Vue.js</span>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/css.png" alt="CSS" class="skill-icon">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/javascript.png" alt="JavaScript" class="skill-icon">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/bootstrap.png" alt="Bootstrap" class="skill-icon">
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+        </section>
+        <!-- Formulário de Contato -->
+        <section class="contato-section" aria-label="Formulário de Contato">
+            <h2 class="contato-title">Contato</h2>
+            <form class="contato-form" action="backend/contato.php" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
+    <footer style="text-align:center; color:var(--cor-branca); padding:2rem 0;">
+        <small>&copy; 2025 Bianca Campos. Todos os direitos reservados.</small>
+    </footer>
 </body>
 </html>

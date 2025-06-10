@@ -1,16 +1,15 @@
 
 // função  de escrever
 
-function ativaLetra(elemento){
-    const arrTexto = elemento.innerHTML.split('');
-    elemento.innerHTML = '';
-    arrTexto.forEach((letra, i)=>{
-        setTimeout(()=>{
-            elemento.innerHTML += letra;
-        }, 75 * i)
-    })
+function ativaLetra(elemento) {
+    const texto = elemento.textContent;
+    elemento.textContent = '';
+    [...texto].forEach((letra, i) => {
+        setTimeout(() => {
+            elemento.textContent += letra;
+        }, 75 * i);
+    });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const titulo = document.querySelector('.desc');
