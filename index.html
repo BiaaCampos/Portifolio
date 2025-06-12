@@ -17,11 +17,14 @@
 <body>
     <script src="JS/script.js"></script>
     <script src="JS/lineVertical.js"></script>
-    <script src="JS/contato.js"></script>
+    <!-- <script src="JS/contato.js"></script> -->
+    <script src="JS/modal.js"></script>
+    <script src="JS/nav.js"></script>
+    <script src="JS/animacao.js"></script>
     <header>
         <div class="div-header">
             <span class="icone-styles">
-                <img src="images/icons/animal-shelter.png" class="instx" alt="Logo Bianca Campos">
+                <img src="images/icons/animal-shelter.png" class="instx2" alt="Logo Bianca Campos">
             </span>
             <nav class="links-div" aria-label="Navegação principal">
                 <a href="#" class="link-styles">Sobre</a>
@@ -40,13 +43,16 @@
                 <p class="desc">Olá! Sou desenvolvedora web com formação em Análise e Desenvolvimento de Sistemas. Tenho experiência em construção de interfaces modernas, responsivas e funcionais utilizando tecnologias como React.js, Vue.js, JavaScript, HTML e CSS.</p>
                 <div class="redes">
                     <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
-                        <img src="images/icons/instagram.png" class="instx" alt="Instagram">
+                        <img src="images/icons/instagram (1).png" class="instx" alt="Instagram">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                        <img src="images/icons/linkedin.png" class="instx" alt="LinkedIn">
+                        <img src="images/icons/icons8-linkedin.png" class="instx" alt="LinkedIn">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub">
-                        <img src="images/icons/github.png" class="instx" alt="GitHub">
+                        <img src="images/icons/github (1).png" class="instx" alt="GitHub">
+                    </a>
+                    <a href="BIANCA VITORIA DE CAMPOS - Curriculo.pdf" download class="curriculo-btn" title="Baixar Currículo">
+                        <img src="images/icons/icons8-currículo-64.png" class="instx" alt="Currículo">
                     </a>
                 </div>
             </div>
@@ -81,24 +87,39 @@
             <h2 class="cards-title">Meus Cards</h2>
             <div class="cards-container">
                 <div class="card">
-                    <img src="images/icons/project.png" alt="Projeto 1" class="card-icon">
-                    <h3 class="card-title">Projeto 1</h3>
-                    <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/icons/project.png" alt="Projeto 1" class="card-icon">
+                            <h3 class="card-title">Projeto 1</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="images/icons/project.png" alt="Projeto 2" class="card-icon">
-                    <h3 class="card-title">Projeto 2</h3>
-                    <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
-                </div>
-                <div class="card">
-                    <img src="images/icons/project.png" alt="Projeto 3" class="card-icon">
-                    <h3 class="card-title">Projeto 3</h3>
-                    <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/icons/project.png" alt="Projeto 1" class="card-icon">
+                            <h3 class="card-title">Projeto 1</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                        </div>
+                    </div>
+                </div><div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/icons/project.png" alt="Projeto 1" class="card-icon">
+                            <h3 class="card-title">Projeto 1</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="card-desc">Descrição breve do projeto ou habilidade.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        </section>
-        <!-- Seção de Skills -->
         <section class="skills-section" aria-label="Minhas Skills">
             <h2 class="skills-title">Minhas Skills</h2>
             <div class="skills-container">
@@ -124,10 +145,9 @@
                 </div>
             </div>
         </section>
-        <!-- Formulário de Contato -->
         <section class="contato-section" aria-label="Formulário de Contato">
             <h2 class="contato-title">Contato</h2>
-            <form class="contato-form" action="backend/contato.php" method="POST">
+            <form class="contato-form" action="https://formspree.io/f/xdkzglnz" method="POST" id="form-contato">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required>
                 <label for="email">E-mail</label>
@@ -136,6 +156,11 @@
                 <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
+            <div id="modal-sucesso" class="modal-sucesso">
+                <div class="modal-content">
+                    <span>Mensagem enviada com sucesso!</span>
+                </div>
+            </div>
         </section>
     </main>
     <footer style="text-align:center; color:var(--cor-branca); padding:2rem 0;">
