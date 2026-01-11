@@ -28,6 +28,10 @@ body {
     /* max-width: 1200px; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* HEADER */
 
@@ -166,7 +170,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(110, 110, 110);
     border-radius: 50%;
     width: 44px;
     height: 44px;
@@ -174,10 +177,9 @@ main {
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
-.redes a:hover {
-    background: var(--cor-branca);
+/* .redes a:hover {
     transform: scale(1.12);
-}
+} */
 
 .name-styles {
     font-family: 'Lexend Deca', 'Fira Mono', 'Consolas', monospace;
@@ -196,6 +198,17 @@ main {
     animation: typing 1.2s steps(20, end) 1;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.icon{
+    color: var(--cor-branca);
+    font-size: 25px;
+     transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--cor-destaque, #00e5ff);
+    transform: scale(1.2);
 }
 
 @keyframes typing {
@@ -432,7 +445,24 @@ main {
     background-color: transparent;
 }
 
+.a-visu-card{
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: var(--cor-branca);
+    color: var(--cor-modal-text);
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.a-visu-card:hover {
+    background-color: var(--cor-destaque-hover, #00bcd4);
+    transform: scale(1.05);
+}
+
 /* Skills */
+
 .skills-section {
     padding: 50px 20px;
     max-width: 1000px;
@@ -473,19 +503,27 @@ main {
         opacity 0.7s cubic-bezier(.4,0,.2,1);
 }
 
+.skill::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-left: 2px solid #61dafb;
+  border-radius: 14px;
+
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.6s ease;
+}
+
+.skill:hover::after {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
 .skill.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
-.skill-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 8px var(--cor-destaque, #00e5ff44));
-}
-
-.skill span {
+.skill span {   
     color: var(--cor-destaque, #00e5ff);
     font-weight: bold;
     font-size: 1.1rem;
@@ -493,10 +531,17 @@ main {
     text-shadow: 0 0 8px #00e5ff44, 0 0 2px #fff;
 }
 
-.skill:hover {
-    background: var(--cor-destaque, #00e5ff);
-    box-shadow: 0 8px 32px var(--cor-destaque-hover, #00bcd4);
-    transform: scale(1.07);
+.tech-icon{
+    font-size: 48px;
+    background-color: transparent;
+    margin-bottom: 12px;
+    color: var(--cor-branca);
+    /* filter: drop-shadow(0 0 8px var(--cor-destaque, #00e5ff44)); */
+}
+
+.tech-span-icon{
+    background-color: transparent;
+    cursor: default;
 }
 
 /* Contato */
@@ -577,6 +622,10 @@ main {
     margin-top: 10px;
     box-shadow: 0 2px 8px var(--cor-destaque-hover, #00bcd4);
     transition: background 0.2s, transform 0.2s;
+}
+
+.label-contato{
+    background-color: transparent;
 }
 
 @keyframes slideUpFadeIn {
